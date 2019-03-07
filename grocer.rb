@@ -49,11 +49,11 @@ def checkout(cart, coupons)
   total_cost = 0
   consolidated_cart = {}
   consolidated_cart = consolidate_cart(cart)
-  puts "after consolidated - #{consolidated_cart}"
+  
   consolicated_cart = apply_coupons(consolidated_cart, coupons)
-  puts "after coupons - #{consolidated_cart}"
+  
   consolidated_cart = apply_clearance(consolidated_cart)
-  puts "after clearance -#{consolidated_cart}"
+  
   item_name = ""
   for i in 0...consolidated_cart.length
     item_name = consolidated_cart.keys[i]
