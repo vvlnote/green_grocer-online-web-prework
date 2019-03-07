@@ -60,7 +60,7 @@ def checkout(cart, coupons)
     total_cost += (consolidated_cart[item_name][:price] * consolidated_cart[item_name][:count]).round(2)
   end
   if total_cost > 100
-    total_cost -= total_cost
+    total_cost = (total_cost * 0.9).round(2)
   end
   total_cost
 end
