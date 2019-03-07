@@ -50,7 +50,7 @@ def checkout(cart, coupons)
   consolidated_cart = {}
   consoliated_cart = consolidate_cart(cart)
   consolicated_cart = apply_coupons(consolidated_cart, coupons)
-  consolidated_cart = apply_discount(consolidated_cart)
+  consolidated_cart = apply_clearance(consolidated_cart)
   item_name = ""
   for i in 0...consolidated_cart.length
     item_name = consolidated_cart.keys[i]
