@@ -51,5 +51,13 @@ def checkout(cart, coupons)
   consoliated_cart = consolidate_cart(cart)
   consolicated_cart = apply_coupons(consolidated_cart, coupons)
   consolidated_cart = apply_discount(consolidated_cart)
-
+  item_name = ""
+  for i in 0...consolidated_cart.length
+    item_name = consolidated_cart.keys[i]
+    total_cost += (consolidated_cart[item_name][:price] * consolidated_cart[item_name][:count]).round(2)
+  end
+  if total_cost > 100
+    total_cost -= total_cost
+  end
+  total_cost
 end
