@@ -48,7 +48,7 @@ def checkout(cart, coupons)
   # code here
   total_cost = 0
   consolidated_cart = {}
-  consoliated_cart = consolidate_cart(cart)
+  consolidated_cart = consolidate_cart(cart)
   puts "after consolidated - #{consolidated_cart}"
   consolicated_cart = apply_coupons(consolidated_cart, coupons)
   consolidated_cart = apply_clearance(consolidated_cart)
